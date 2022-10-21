@@ -42,12 +42,12 @@ const map = new Map({
 });
 
 // 加载地图导航条
-// const zoomslider = new ZoomSlider();
-// map.addControl(zoomslider);
-// let zoomToExtent = new ZoomToExtent({
-//   extent: [13100000, 4290000, 13200000, 5210000],
-// });
-// map.addControl(zoomToExtent);
+const zoomslider = new ZoomSlider();
+map.addControl(zoomslider);
+let zoomToExtent = new ZoomToExtent({
+  extent: [13100000, 4290000, 13200000, 5210000], // 视口区域设为北京
+});
+map.addControl(zoomToExtent);
 
 // 实现地图基本操作按钮
 let container = document.querySelector('#map');
