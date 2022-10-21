@@ -2,12 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://openlayers.org/favicon.ico"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Using OpenLayers with Vite</title>
+    <style>
+      .tools {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        gap: 10px;
+        /* width: 100px; */
+        /* height: 250px; */
+      }
+
+      .toolBtn {
+        font-size: 12px;
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: #fff;
+        border: 1px solid rgb(30, 218, 208);
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div id="map"></div>
+    <div class="tools">
+      <div type="button" class="toolBtn zoom-out">单机放大</div>
+      <div type="button" class="toolBtn zoom-in">单机缩小</div>
+      <div type="button" class="toolBtn move-df">平移到东方学院</div>
+      <div type="button" class="toolBtn move-gs">平移到高桑</div>
+      <div type="button" class="toolBtn move-me">平移到我家</div>
+      <div type="button" class="toolBtn move-re">复位</div>
+    </div>
     <script type="module" src="./main.js"></script>
   </body>
 </html>

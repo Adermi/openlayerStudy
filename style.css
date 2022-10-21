@@ -1,9 +1,11 @@
-@import "node_modules/ol/ol.css";
+@import 'node_modules/ol/ol.css';
 
-html, body {
+html,
+body {
   margin: 0;
   height: 100%;
 }
+
 #map {
   position: absolute;
   top: 0;
