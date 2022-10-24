@@ -31,23 +31,46 @@
         border: 1px solid rgb(30, 218, 208);
         cursor: pointer;
       }
+
+      .content {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        z-index: 6;
+      }
+
+      input,
+      select {
+        padding: 5px;
+        outline: none;
+        border: 2px solid red;
+      }
+
+      .box {
+        margin-bottom: 5px;
+      }
     </style>
   </head>
   <body>
     <div id="map">
-      <div class="layerControl">
-        <div class="title">图层列表</div>
-        <ul class="layerTree"></ul>
+      <div class="content">
+        <div class="box">
+          <label for="projection">请选择投影坐标：</label>
+          <select id="projection">
+            <option value="EPSG:4326">EPSG:4326</option>
+            <option value="EPSG:3857">EPSG:3857</option>
+          </select>
+        </div>
+        <div class="box">
+          <label for="Precision" class="number">请选择精度：</label>
+          <input type="number" id="Precision" value="4" />
+        </div>
+        <div class="mouse-position"></div>
       </div>
     </div>
-    <!-- <div class="tools">
-      <div type="button" class="toolBtn zoom-out">单机放大</div>
-      <div type="button" class="toolBtn zoom-in">单机缩小</div>
-      <div type="button" class="toolBtn move-df">平移到东方学院</div>
-      <div type="button" class="toolBtn move-gs">平移到高桑家</div>
-      <div type="button" class="toolBtn move-me">平移到我家</div>
-      <div type="button" class="toolBtn move-re">复位</div>
-    </div> -->
     <script type="module" src="./main.js"></script>
   </body>
 </html>
